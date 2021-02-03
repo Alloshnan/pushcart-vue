@@ -17,7 +17,7 @@
             
             <div class="form-group">
                 <label>Catalog</label>
-                <select class="form-control" v-model="product.catalog_id">
+                <select class="form-control" v-model="product.catalog_id" :required="!product.catalog_id">
                     <option v-for="catalog in catalogs" :key="catalog.id" v-bind:value="catalog.id">{{ catalog.name }}</option>
                 </select>
             </div>
